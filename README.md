@@ -50,6 +50,7 @@ The task was achieved by upgrading PH’s database from simple CSV files to an o
     SELECT * FROM employees ORDER BY hire_date DESC;
 
 -	The above query showed that the latest hiring data available was of “2000-01-03”
+
 -	The number of people hired in total by the company, based on the data provided was 300,024. Calculated using the following:
 
     SELECT COUNT(emp_no) FROM employees;
@@ -69,33 +70,48 @@ The task was achieved by upgrading PH’s database from simple CSV files to an o
   criteria range choosen to filter retirees in "reitirement_info" table. In order to populate the “mentor_list” table based on the
   "current_title_info" table (table made in part one) and the birth date between "1965-12-31" to "1965-01-01", all the tables  starting   with “retirement_info” were dropped and recreated with a birth date between “1952” to “1965”.
 
-    --Drop and recreate tables to include birth date till 1965.
-    DROP TABLE retirement_info;
-    DROP TABLE current_emp;
-    DROP TABLE title_info;
-    DROP TABLE current_title_info;
-    DROP TABLE retiree_countBytitle;
-    DROP TABLE mentor_list;
+      --Drop and recreate tables to include birth date till 1965.
+
+      DROP TABLE retirement_info;
+
+      DROP TABLE current_emp;
+
+      DROP TABLE title_info;
+
+      DROP TABLE current_title_info;
+
+      DROP TABLE retiree_countBytitle;
+
+      DROP TABLE mentor_list;
 
 -	The first step was repeated to create the “mentor_list” table.
 
 -	Quick inspection of the table showed that the table needed to be treated for duplicate rows.
 
--	The partitioning function was used again to get the current title of the retiree and was saved as “mentor_list_final” table (exported as “mentor_list_final.csv”).
+-	The partitioning function was used again to get the current title of the retiree and was saved as “mentor_list_final” table 
+  (exported as “mentor_list_final.csv”).
 
--	Finally, the count function (on ‘emp_no’) along with group by (on ‘title’)  was used to get “mentor_countBytitle” table (exported as “mentor_countBytitle.csv”).
+-	Finally, the count function (on ‘emp_no’) along with group by (on ‘title’)  was used to get “mentor_countBytitle” table (exported as
+  “mentor_countBytitle.csv”).
 
 ## Summary & Result
 -	the number of individuals retiring is 108,958, for potential retiree’s criterion set at:
-  -	55-68 years of age
-  -	birthdates between 1965-12-31 and 1952-01-01
-  -	hire dates between 1988-12-31 and 1985-01-01 (worked 31-35 years) 
-  -	currently employed
+      -	55-68 years of age
+
+      -	birthdates between 1965-12-31 and 1952-01-01
+
+      -	hire dates between 1988-12-31 and 1985-01-01 (worked 31-35 years) 
+
+      -	currently employed
 -	the number of individuals retiring is 33,118, for potential retiree’s criterion set at: 
-  -	65-68 years of age
-  -	birthdates between 1955-12-31 and 1952-01-01
-  -	hire dates between 1988-12-31 and 1985-01-01 (worked 31-35 years) 
-  -	currently employed
+      -	65-68 years of age
+      
+      -	birthdates between 1955-12-31 and 1952-01-01
+      
+      -	hire dates between 1988-12-31 and 1985-01-01 (worked 31-35 years) 
+      
+      -	currently employed
+      
 -	the number of individuals retiring based on birth year, for age 68:
 
         
@@ -109,9 +125,12 @@ The task was achieved by upgrading PH’s database from simple CSV files to an o
 -	Based on the calculation of people retiring in year 2020, the same count would be rehired for vacancies created.
 
 -	The number of retirees that are eligible to be mentors is 691, for potential mentor criterion set as:
-  -	55 years-old, born in year 1965.
-  -	hire dates between 1988-12-31 and 1985-01-01.
-  -	Currently employed.
+
+    -	55 years-old, born in year 1965.
+    
+    -	hire dates between 1988-12-31 and 1985-01-01.
+    
+    -	Currently employed.
 
 -	For count of mentors by title, see mentor_countbytitle.csv.
 
@@ -120,14 +139,17 @@ The task was achieved by upgrading PH’s database from simple CSV files to an o
 ### Limitations & Recommendations:
 -	The data for hire dates is dated. There is no data available for hiring after January 2000.
 
--	The data for salaries is not updated as it was observed that the same salary was carried forward with the change in title and promotion.
+-	The data for salaries is not updated as it was observed that the same salary was carried forward with the change in title and
+  promotion.
 
 -	Create a table for mentors grouped by department to see the number of mentors available per department.
 
 -	Create a table for number of retirees grouped by department to plan for department wise hiring for the future.
 
--	Create a table of potential future department managers based on a filter criterion of number of years worked in a department. These employees could be paired with retiring managers for mentorship.
+-	Create a table of potential future department managers based on a filter criterion of number of years worked in a department. These 
+  employees could be paired with retiring managers for mentorship.
 
--	Determine number of potential employees or new hires that can be enrolled into the mentor program. This can be determined by filtering for hire dates and years served.
+-	Determine number of potential employees or new hires that can be enrolled into the mentor program. This can be determined by filtering 
+  for hire dates and years served.
 
 -	Break down of retirees per year to determine an average number of retirees per year for annual hiring plans.
