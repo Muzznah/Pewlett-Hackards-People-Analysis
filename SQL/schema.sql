@@ -54,11 +54,10 @@ CREATE TABLE titles (
 	PRIMARY KEY (emp_no, title, from_date, to_date)
 );
 
+--Check table.
+SELECT * FROM titles;
+
 SELECT * FROM departments;
-
-DROP TABLE dept_emp;
-
-DROP TABLE titles;
 
 SELECT * FROM dept_manager;
 
@@ -70,9 +69,6 @@ SELECT * FROM salaries;
 
 SELECT * FROM titles;
 
---CReating retirement_info table.
-SELECT first_name, last_name
-INTO retirement_info
-FROM employees
-WHERE (birth_date BETWEEN '1952-01-01' AND '1955-12-31')
-AND (hire_date BETWEEN '1985-01-01' AND '1988-12-31');
+
+
+
