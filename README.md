@@ -16,10 +16,12 @@ The task was achieved by upgrading PH’s database from simple CSV files to an o
   
 ### Number of individuals retiring
 
-•	The retiree criterion was established as: 
+•	The retiree criteria was established as: 
 
   o	Birth dates: between 1952-01-01 to 1955-12-31
+
   o	Hired dates: between 1985-01-01 to 1988-12-31
+
   o	Currently employed: “to_date” column filtered for “9999-01-01”
 
 •	The table “employees” was filtered for the birthdate, and hire date, and saved into a new table; "retirement_info".
