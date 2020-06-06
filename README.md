@@ -8,6 +8,8 @@ The task was achieved by upgrading PH’s database from simple CSV files to an o
 
 -	An ERD, mapping the existing data tables, their attributes, and dependencies was created on https://app.quickdatabasediagrams.com/.
 
+    ![](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Images/EmployeeDB.png)
+
 -	Using pgAdmin the ERD was translated into a postgress database, named “PH-EmployeeDB”.
   
 -	The six csv files (Data, Salaries, Titles, Dept_Manager, Dept_Emp and Department) were imported into tables with corresponding names.   For details see, <schema_tableCreation.sql>.
