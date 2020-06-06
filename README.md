@@ -6,13 +6,13 @@ Software used: PostgreSQL 11.8 and pgAdmin 4.21
 ## Approach & Challenges faced.
 The task was achieved by upgrading PH’s database from simple CSV files to an operational SQL database, and then performing queries with conditionals. The steps taken for transformation were as follows:
 
-  •	An ERD, mapping the existing data tables, their attributes, and dependencies was created on https://app.quickdatabasediagrams.com/.
+•	An ERD, mapping the existing data tables, their attributes, and dependencies was created on https://app.quickdatabasediagrams.com/.
+
+•	Using pgAdmin the ERD was translated into a postgress database, named “PH-EmployeeDB”.
   
-  •	Using pgAdmin the ERD was translated into a postgress database, named “PH-EmployeeDB”.
+•	The six csv files (Data, Salaries, Titles, Dept_Manager, Dept_Emp and Department) were imported into tables with corresponding names.   For details see, “schema_tableCreation.sql”.
   
-  •	The six csv files (Data, Salaries, Titles, Dept_Manager, Dept_Emp and Department) were imported into tables with corresponding     names. For details see, “schema_tableCreation.sql”.
-  
-  •	Finally, the database was queried to determine the number of current employees that were eligible to retire, and of those which   qualified for the mentorship roles. For details you can view Queries folder containing “queris.sql”.
+•	Finally, the database was queried to determine the number of current employees that were eligible to retire, and were qualified for the mentorship roles. For details view <https://github.com/Muzznah/Pewlett-Hackard-Analysis/tree/master/Queries>.
   
 ### Number of individuals retiring
 
