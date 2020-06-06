@@ -29,25 +29,26 @@ The task was achieved by upgrading PH’s database from simple CSV files to an o
 
 -	The table “employees” was filtered for the birthdate, and hire date, and saved into a new table; "retirement_info".
 
--	The "retirement_info" table was then left-joined to "dept_emp" table and the currently employed criterion was fulfilled by, filtering
-  for "to_date" equals to “9999-01-01”. This new information was saved as "current_emp" table.
+-	The "retirement_info" table was then left-joined to "dept_emp" table and the currently employed criterion was fulfilled by,  
+    filtering for "to_date" equals to “9999-01-01”. This new information was saved as "current_emp" table.
 
--	To get a retiree count by title, the “current_emp” table was inner-joined with “salaries” and “title”, to get the columns; “from_date”
-  and “salary”, and saved as “title_info”
+-	To get a retiree count by title, the “current_emp” table was inner-joined with “salaries” and “title”, to get the columns; 
+    “from_date” and “salary”, and saved as “title_info”
 
--	Duplicate rows in the created table were handled through partitioning function. The table was partitioned by “emp_no” with “from_date”
-  sorted in descending, to get the current title for each “emp_no”. The duplicate free information was saved into “current_title_info”
-  table (exported as “[current_title_info.csv](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Challenge/current_title_info.csv)”).
+-	Duplicate rows in the created table were handled through partitioning function. The table was partitioned by “emp_no” with 
+    “from_date sorted in descending, to get the current title for each “emp_no”. The duplicate free information was saved into 
+    “current_title_info” table (exported as “[current_title_info.csv](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Challenge/current_title_info.csv)”).
 
 -	Finally, count function was perfomed on “emp_no” of “current_title_info” table and was saved in table "retiree_counttBytitle”
-  (exported as “[retiree_counttBytitle.csv](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Challenge/retiree_countbytitle.csv)”).
+    (exported as “[retiree_counttBytitle.csv](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Challenge/retiree_countbytitle.csv)”).
 
 ## Number of individuals being hired
 
--	This part was challenging in terms of interpreting the ask. Was it asking for individuals being hired this year? Or those that will be
-  hired in the following years due to retirements.
+-	This part was challenging in terms of interpreting the ask. Was it asking for individuals being hired this year? Or those that will 
+    be hired in the following years due to retirements.
 
--	The information for hiring was only present in the “employees” table in the form of “hire_date” column. To get the latest hiring date   following code was used:
+-	The information for hiring was only present in the “employees” table in the form of “hire_date” column. To get the latest hiring 
+    data, following code was used:
 
     SELECT * FROM employees ORDER BY hire_date DESC;
 
@@ -59,18 +60,18 @@ The task was achieved by upgrading PH’s database from simple CSV files to an o
 
 -	The number of people hired in year 2000 was 13. Calculated using the following:
 
-    _SELECT COUNT(emp_no) FROM employees
-    WHERE hire_date BETWEEN '2000-01-01' AND '2000-12-31' ;_
+    SELECT COUNT(emp_no) FROM employees
+    WHERE hire_date BETWEEN '2000-01-01' AND '2000-12-31';
 
 ## Number of individuals available for mentorship role
 
 -	To get the number of individuals available for mentorship roles “current_title_info” table  was inner-joined to "titles" to include
-  the "to_date" column, and inner-joined to "employees" to filter for birth dates for year 1965 only.  The filtered data was saved as
-  “mentor_list” table.
+    the "to_date" column, and inner-joined to "employees" to filter for birth dates for year 1965 only.  The filtered data was saved as
+    “mentor_list” table.
 
 -	The challenge encountered at this stage was that the output of the above function was a data less table. Year 1965 was beyond the
-  criteria range choosen to filter retirees in "reitirement_info" table. In order to populate the “mentor_list” table based on the
-  "current_title_info" table (table made in part one) and the birth date between "1965-12-31" to "1965-01-01", all the tables  starting   with “retirement_info” were dropped and recreated with a birth date between “1952” to “1965”.
+    criteria range choosen to filter retirees in "reitirement_info" table. In order to populate the “mentor_list” table based on the
+   "current_title_info" table (table made in part one) and the birth date between "1965-12-31" to "1965-01-01", all the tables  starting     with “retirement_info” were dropped and recreated with a birth date between “1952” to “1965”.
 
       --Drop and recreate tables to include birth date till 1965.
 
@@ -91,10 +92,10 @@ The task was achieved by upgrading PH’s database from simple CSV files to an o
 -	Quick inspection of the table showed that the table needed to be treated for duplicate rows.
 
 -	The partitioning function was used again to get the current title of the retiree and was saved as “mentor_list_final” table 
-  (exported as “mentor_list_final.csv”).
+  (exported as “[mentor_list_final.csv] (https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Challenge/mentor_list_final.csv)”).
 
 -	Finally, the count function (on ‘emp_no’) along with group by (on ‘title’)  was used to get “mentor_countBytitle” table (exported as
-  “mentor_countBytitle.csv”).
+  “[mentor_countBytitle.csv](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Challenge/mentor_countbytitle.csv)”).
 
 ## Summary & Result
 -	the number of individuals retiring is 108,958, for potential retiree’s criterion set at:
@@ -120,9 +121,9 @@ The task was achieved by upgrading PH’s database from simple CSV files to an o
 
         
 
--	For counts of potential retirees by job title, see retiree_countbytitle.csv.
+-	For counts of potential retirees by job title, see [retiree_countbytitle.csv](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Challenge/retiree_countbytitle.csv).
 
--	For a table of potential retirees with titles, see current _title_info.csv.
+-	For a table of potential retirees with titles, see [current _title_info.csv](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Challenge/current_title_info.csv).
 
 -	Total number of employees hired by HP are 300,024 and the number of employees hired only in year 2000 are 13.
 
@@ -136,24 +137,25 @@ The task was achieved by upgrading PH’s database from simple CSV files to an o
     
     -	Currently employed.
 
--	For count of mentors by title, see mentor_countbytitle.csv.
+-	For count of mentors by title, see [mentor_countbytitle.csv](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Challenge/mentor_countbytitle.csv).
 
--	For a table of potential mentors with job title, see mentor_list_final.csv.
+-	For a table of potential mentors with job title, see [mentor_list_final.csv](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Challenge/mentor_list_final.csv).
+-   For all Challenge queri details, see [Challenge_queri.sql](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Queries/Challenge_queri.sql)
 
 ## Limitations & Recommendations:
 -	The data for hire dates is dated. There is no data available for hiring after January 2000.
 
 -	The data for salaries is not updated as it was observed that the same salary was carried forward with the change in title and
-  promotion.
+    promotion.
 
 -	Create a table for mentors grouped by department to see the number of mentors available per department.
 
 -	Create a table for number of retirees grouped by department to plan for department wise hiring for the future.
 
 -	Create a table of potential future department managers based on a filter criterion of number of years worked in a department. These 
-  employees could be paired with retiring managers for mentorship.
+    employees could be paired with retiring managers for mentorship.
 
--	Determine number of potential employees or new hires that can be enrolled into the mentor program. This can be determined by filtering 
-  for hire dates and years served.
+-	Determine number of potential employees or new hires that can be enrolled into the mentor program. This can be determined by    
+    filtering for hire dates and years served.
 
 -	Break down of retirees per year to determine an average number of retirees per year for annual hiring plans.
