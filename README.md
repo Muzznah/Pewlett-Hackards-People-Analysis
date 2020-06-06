@@ -12,17 +12,18 @@ The task was achieved by upgrading PH’s database from simple CSV files to an o
   
 -	The six csv files (Data, Salaries, Titles, Dept_Manager, Dept_Emp and Department) were imported into tables with corresponding names.   For details see, <schema_tableCreation.sql>.
   
--	Finally, the database was queried to determine the number of current employees that were eligible to retire, and were qualified for the mentorship roles.For details view <https://github.com/Muzznah/Pewlett-Hackard-Analysis/tree/master/Queries>.
+-	Finally, the database was queried to determine the number of current employees that were eligible to retire, and were qualified for
+  the mentorship roles.For details view <https://github.com/Muzznah/Pewlett-Hackard-Analysis/tree/master/Queries>.
   
 ### Number of individuals retiring
 
 -	The retiree criteria was established as: 
 
-  -	Birth dates: between 1952-01-01 to 1955-12-31
+    -	Birth dates: between 1952-01-01 to 1955-12-31
 
-  -	Hired dates: between 1985-01-01 to 1988-12-31
+    -	Hired dates: between 1985-01-01 to 1988-12-31
 
-  -	Currently employed: “to_date” column filtered for “9999-01-01”
+    -	Currently employed: “to_date” column filtered for “9999-01-01”
 
 -	The table “employees” was filtered for the birthdate, and hire date, and saved into a new table; "retirement_info".
 
