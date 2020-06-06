@@ -12,10 +12,10 @@ The task was achieved by upgrading PH’s database from simple CSV files to an o
 
 -	Using pgAdmin the ERD was translated into a postgress database, named “PH-EmployeeDB”.
   
--	The six csv files (Data, Salaries, Titles, Dept_Manager, Dept_Emp and Department) were imported into tables with corresponding names.   For details see, <schema_tableCreation.sql>.
+-	The six csv files (Data, Salaries, Titles, Dept_Manager, Dept_Emp and Department) were imported into tables with corresponding names.   For details see, [schema_tableCreation.sql].
   
 -	Finally, the database was queried to determine the number of current employees that were eligible to retire, and were qualified for
-  the mentorship roles.For details view [queries.sql](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Queries/queries.sql)
+  the mentorship roles. For details view [queries.sql](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Queries/queries.sql)
   
 ### Number of individuals retiring
 
