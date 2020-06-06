@@ -115,6 +115,7 @@ The task was achieved by upgrading PH’s database from simple CSV files to an o
       -	currently employed
       
 -	the number of individuals retiring based on birth year, for age 68:
+![](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Images/AnualRetirementTable.png)
 
         
 
