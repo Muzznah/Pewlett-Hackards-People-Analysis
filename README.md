@@ -136,7 +136,7 @@ The task was achieved by upgrading PH’s database from simple CSV files to an o
 
 -	For a table of potential mentors with job title, see mentor_list_final.csv.
 
-### Limitations & Recommendations:
+## Limitations & Recommendations:
 -	The data for hire dates is dated. There is no data available for hiring after January 2000.
 
 -	The data for salaries is not updated as it was observed that the same salary was carried forward with the change in title and
