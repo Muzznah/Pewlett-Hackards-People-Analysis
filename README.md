@@ -12,10 +12,10 @@ The task was achieved by upgrading PH’s database from simple CSV files to an o
 
 -	Using pgAdmin the ERD was translated into a postgress database, named “PH-EmployeeDB”.
   
--	The six csv files (Data, Salaries, Titles, Dept_Manager, Dept_Emp and Department) were imported into tables with corresponding names. For details see, <[schema_tableCreation.sql](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/SQL/schema_tableCreation.sql)>.
+-	The six csv files (Data, Salaries, Titles, Dept_Manager, Dept_Emp and Department) were imported into tables with corresponding names. For details see, <[Table Creation](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/SQL/schema_tableCreation.sql)>.
   
 -	Finally, the database was queried to determine the number of current employees that were eligible to retire, and were qualified for
-  the mentorship roles. For details view <[queries.sql](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Queries/queries.sql)>
+  the mentorship roles. For details view <[Queries](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Queries/queries.sql)>
   
 ### Number of individuals retiring
 
@@ -37,10 +37,10 @@ The task was achieved by upgrading PH’s database from simple CSV files to an o
 
 -	Duplicate rows in the created table were handled through partitioning function. The table was partitioned by “emp_no” with 
     “from_date sorted in descending, to get the current title for each “emp_no”. The duplicate free information was saved into 
-    “current_title_info” table (exported as “[current_title_info.csv](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Challenge/current_title_info.csv)”).
+    “current_title_info” table (exported as <[current_title_info.csv](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Challenge/current_title_info.csv)>).
 
 -	Finally, count function was perfomed on “emp_no” of “current_title_info” table and was saved in table "retiree_counttBytitle”
-    (exported as “[retiree_counttBytitle.csv](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Challenge/retiree_countbytitle.csv)”).
+    (exported as <[retiree_counttBytitle.csv](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Challenge/retiree_countbytitle.csv)>).
 
 ## Number of individuals being hired
 
@@ -92,7 +92,7 @@ The task was achieved by upgrading PH’s database from simple CSV files to an o
 -	Quick inspection of the table showed that the table needed to be treated for duplicate rows.
 
 -	The partitioning function was used again to get the current title of the retiree and was saved as “mentor_list_final” table 
-  (exported as “[mentor_list_final.csv] (https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Challenge/mentor_list_final.csv)”).
+  (exported as <[mentor_list_final.csv] (https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Challenge/mentor_list_final.csv)>).
 
 -	Finally, the count function (on ‘emp_no’) along with group by (on ‘title’)  was used to get “mentor_countBytitle” table (exported as
   “[mentor_countBytitle.csv](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Challenge/mentor_countbytitle.csv)”).
@@ -137,10 +137,10 @@ The task was achieved by upgrading PH’s database from simple CSV files to an o
     
     -	Currently employed.
 
--	For count of mentors by title, see <[mentor_countbytitle.csv](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Challenge/mentor_countbytitle.csv)>.
+-	For count of mentors by title, see <[Count By Title](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Challenge/mentor_countbytitle.csv)>.
 
 -	For a table of potential mentors with job title, see <[mentor_list_final.csv](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Challenge/mentor_list_final.csv)>.
--   For all Challenge queri details, see <[Challenge_queri.sql](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Queries/Challenge_queri.sql)>.
+-   For all Challenge queri details, see <[Challenge Queries ](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Queries/Challenge_queri.sql)>.
 
 ## Limitations & Recommendations:
 -	The data for hire dates is dated. There is no data available for hiring after January 2000.
