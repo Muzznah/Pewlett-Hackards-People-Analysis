@@ -92,7 +92,7 @@ The task was achieved by upgrading PH’s database from simple CSV files to an o
 -	Quick inspection of the table showed that the table needed to be treated for duplicate rows.
 
 -	The partitioning function was used again to get the current title of the retiree and was saved as “mentor_list_final” table 
-  (exported as <[mentor_list_final.csv] (https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Challenge/mentor_list_final.csv)>).
+  (exported as <[mentor_list_final.csv](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Challenge/mentor_list_final.csv)>).
 
 -	Finally, the count function (on ‘emp_no’) along with group by (on ‘title’)  was used to get “mentor_countBytitle” table (exported as
   “[mentor_countBytitle.csv](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Challenge/mentor_countbytitle.csv)”).
