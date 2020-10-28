@@ -140,7 +140,7 @@ The task was achieved by upgrading PH’s database from simple CSV files to an o
 -	For count of mentors by title, see <[Count By Title](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Challenge/mentor_countbytitle.csv)>.
 
 -	For a table of potential mentors with job title, see <[mentor_list_final.csv](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Challenge/mentor_list_final.csv)>.
--   For all Challenge queri details, see <[Challenge Queries ](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Queries/Challenge_queri.sql)>.
+-   For all Challenge queri details, see <[Challenge Queries](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Queries/Challenge_queri.sql)>.
 
 ## Limitations & Recommendations:
 -	The data for hire dates is dated. There is no data available for hiring after January 2000.
