@@ -1,4 +1,4 @@
-# Pewlett-Hackard-Analysis
+# Pewlett Hackard's People Analysis
 ## Background
 The purpose of this assignment was to help, Pewlett Hackard (PH) future-proof the company, by determining how many people would be retiring soon, and of those, how many ,can be engaged as mentors for the new hires. 
 ## Resources
@@ -6,16 +6,16 @@ Software used: PostgreSQL 11.8 and pgAdmin 4.21
 ## Approach & Challenges faced.
 The task was achieved by upgrading PH’s database from simple CSV files to an operational SQL database, and then performing queries with conditionals. The steps taken for transformation were as follows:
 
--	An ERD, mapping the existing data tables, their attributes, and dependencies was created on https://app.quickdatabasediagrams.com/.
+-	An ERD, mapping the existing data tables, their attributes, and dependencies was created on <[Quick Database Diagrams ](https://app.quickdatabasediagrams.com/)>.
 
     ![](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Images/EmployeeDB.png)
 
 -	Using pgAdmin the ERD was translated into a postgress database, named “PH-EmployeeDB”.
   
--	The six csv files (Data, Salaries, Titles, Dept_Manager, Dept_Emp and Department) were imported into tables with corresponding names.   For details see, [schema_tableCreation.sql](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/SQL/schema_tableCreation.sql).
+-	The six csv files (Data, Salaries, Titles, Dept_Manager, Dept_Emp and Department) were imported into tables with corresponding names. For details see, <[schema_tableCreation.sql](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/SQL/schema_tableCreation.sql)>.
   
 -	Finally, the database was queried to determine the number of current employees that were eligible to retire, and were qualified for
-  the mentorship roles. For details view [queries.sql](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Queries/queries.sql)
+  the mentorship roles. For details view <[queries.sql](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Queries/queries.sql)>
   
 ### Number of individuals retiring
 
@@ -71,7 +71,7 @@ The task was achieved by upgrading PH’s database from simple CSV files to an o
 
 -	The challenge encountered at this stage was that the output of the above function was a data less table. Year 1965 was beyond the
     criteria range choosen to filter retirees in "reitirement_info" table. In order to populate the “mentor_list” table based on the
-   "current_title_info" table (table made in part one) and the birth date between "1965-12-31" to "1965-01-01", all the tables  starting     with “retirement_info” were dropped and recreated with a birth date between “1952” to “1965”.
+   "current_title_info" table (table made in part one) and the birth date between "1965-12-31" to "1965-01-01", all the tables  starting with “retirement_info” were dropped and recreated with a birth date between “1952” to “1965”.
 
       --Drop and recreate tables to include birth date till 1965.
 
@@ -121,9 +121,9 @@ The task was achieved by upgrading PH’s database from simple CSV files to an o
 
         
 
--	For counts of potential retirees by job title, see [retiree_countbytitle.csv](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Challenge/retiree_countbytitle.csv).
+-	For counts of potential retirees by job title, see <[retiree_countbytitle.csv](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Challenge/retiree_countbytitle.csv)>.
 
--	For a table of potential retirees with titles, see [current _title_info.csv](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Challenge/current_title_info.csv).
+-	For a table of potential retirees with titles, see <[current _title_info.csv](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Challenge/current_title_info.csv)>.
 
 -	Total number of employees hired by HP are 300,024 and the number of employees hired only in year 2000 are 13.
 
@@ -137,10 +137,10 @@ The task was achieved by upgrading PH’s database from simple CSV files to an o
     
     -	Currently employed.
 
--	For count of mentors by title, see [mentor_countbytitle.csv](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Challenge/mentor_countbytitle.csv).
+-	For count of mentors by title, see <[mentor_countbytitle.csv](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Challenge/mentor_countbytitle.csv)>.
 
--	For a table of potential mentors with job title, see [mentor_list_final.csv](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Challenge/mentor_list_final.csv).
--   For all Challenge queri details, see [Challenge_queri.sql](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Queries/Challenge_queri.sql)
+-	For a table of potential mentors with job title, see <[mentor_list_final.csv](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Challenge/mentor_list_final.csv)>.
+-   For all Challenge queri details, see <[Challenge_queri.sql](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Queries/Challenge_queri.sql)>.
 
 ## Limitations & Recommendations:
 -	The data for hire dates is dated. There is no data available for hiring after January 2000.
