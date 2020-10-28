@@ -95,7 +95,7 @@ The task was achieved by upgrading PH’s database from simple CSV files to an o
   (exported as <[mentor_list_final.csv](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Challenge/mentor_list_final.csv)>).
 
 -	Finally, the count function (on ‘emp_no’) along with group by (on ‘title’)  was used to get “mentor_countBytitle” table (exported as
-  “[mentor_countBytitle.csv](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Challenge/mentor_countbytitle.csv)”).
+  <[mentor_countBytitle.csv](https://github.com/Muzznah/Pewlett-Hackard-Analysis/blob/master/Challenge/mentor_countbytitle.csv)>).
 
 ## Summary & Result
 -	the number of individuals retiring is 108,958, for potential retiree’s criterion set at:
